@@ -9,6 +9,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: path.resolve(__dirname, 'index.html'),
+        client: path.resolve(__dirname, 'client/resource.js'),
+        server: path.resolve(__dirname, 'server/resource.js'),
       },
       output: {
         entryFileNames: '[name].js'
