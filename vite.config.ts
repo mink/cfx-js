@@ -13,7 +13,8 @@ export default defineConfig({
         server: path.resolve(__dirname, 'server/resource.js'),
       },
       output: {
-        entryFileNames: '[name].js'
+        assetFileNames: "assets/[name].[hash].[ext]",
+        entryFileNames: "[name].[hash].js",
       }
     }
   }
