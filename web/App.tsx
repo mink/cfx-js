@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import Widgets, {defaultWidgets} from './context/widgets'
+import Widget from './Widget'
 
 const App = () => {
     const [widgets, setWidgets] = useState(defaultWidgets)
