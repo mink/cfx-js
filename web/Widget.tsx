@@ -4,9 +4,11 @@ import Widgets from './context/widgets'
 const Widget = ({name, children}) => {
     const {widgets, setWidgets} = useContext(Widgets)
 
-    const handleNuiMessage = ({data}) => {
-        if (data.message === name) {
-            setWidgets({...widgets, [name]: {...widgets[name], visible: data.visible}})
+    const handleNuiMessage = ({data: {message, visible, focus}}) => {
+        if (message === name) {
+            setWidgets({...widgets, [name]: {
+                ...widgets[name], visible, focus,
+            }})
         }
     }
 
