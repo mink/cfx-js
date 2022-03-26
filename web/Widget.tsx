@@ -1,7 +1,7 @@
 import {useContext, useEffect} from 'react'
 import Widgets from './context/widgets'
 
-const Widget = ({name, children}) => {
+const Widget = ({name, children, closeWidget}) => {
     const {widgets, setWidgets} = useContext(Widgets)
 
     const handleNuiMessage = ({data: {message, visible, focus}}) => {
